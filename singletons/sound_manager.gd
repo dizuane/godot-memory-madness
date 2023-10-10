@@ -27,3 +27,6 @@ func play_sound(player: AudioStreamPlayer, key: String) -> void:
 
 func play_button_click(player: AudioStreamPlayer) -> void:
 	play_sound(player, SOUND_SELECT_BUTTON)
+
+func play_tile_click(player: AudioStreamPlayer) -> void:
+	play_sound(player, SOUND_SELECT_TILE)
