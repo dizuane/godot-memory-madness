@@ -4,13 +4,16 @@ extends Control
 
 @onready var sound = $Sound
 @onready var tile_container = $HB/MC1/TileContainer
-@onready var scorer = $Scorer
+@onready var scorer: Scorer = $Scorer
+@onready var moves_label = $HB/MC2/VBoxContainer/HB/MovesLabel
+@onready var pairs_label = $HB/MC2/VBoxContainer/HB2/PairsLabel
 
 func _ready():
 	SignalManager.on_level_selected.connect(on_level_selected)
 
 func _process(delta):
-	pass
+	moves_label.text = scorer.get_moves_made_str()
+	pairs_label.text = scorer.get_pairs_made_str()
 
 func add_memory_tile(ii_dict: Dictionary, fi: CompressedTexture2D) -> void:
 	var new_tile = mem_tile_scene.instantiate()
