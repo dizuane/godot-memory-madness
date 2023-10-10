@@ -15,6 +15,10 @@ run/main_scene="res://master_scene/master_scene.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.png"
 
+[autoload]
+
+ImageManager="*res://singletons/image_manager.gd"
+
 [display]
 
 window/size/viewport_width=1024
